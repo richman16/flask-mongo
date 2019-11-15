@@ -1,3 +1,9 @@
 Para metodo POST
-
 curl -i -H "Content-Type: application/json" -X POST -d '{ "name":"Dan Brown", "bio":"This is an author"}' http://localhost:5000/api/author
+
+Para actualizar un id en especifico
+curl -i -H "Content-Type: application/json" -X PUT -d '{ "name":"Neil Gayman", "bio":"Este es un author ingles de historietas y escritor de fantasia"}' http://localhost:5000/api/author/5dcb733df8e86ce4f67b9462
+HTTP/1.0 200 OK
+
+Para eliminar un registro
+curl -i -X DELETE http://localhost:5000/api/author/5dcb7a75ce9dda84fe69fc61
