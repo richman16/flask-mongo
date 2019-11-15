@@ -1,0 +1,20 @@
+version: "3.5"
+
+services:
+  web:
+    container_name: "flask-api"
+    build: .
+    command: python -u src/app.py
+    ports: 
+      - "5000:5000"
+    volumes:
+      - .:/app
+    links:
+      - db
+  db:
+    container_name: "mongo"
+    image: "mongo:4.2.0"
+
+networks:
+  default:
+    name: "network-web"

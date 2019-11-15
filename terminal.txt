@@ -1,0 +1,3 @@
+Para metodo POST
+
+curl -i -H "Content-Type: application/json" -X POST -d '{ "name":"Dan Brown", "bio":"This is an author"}' http://localhost:5000/api/author
